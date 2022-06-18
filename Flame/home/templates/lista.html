@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html lang="pt br">
+<head>
+	<meta charset="UTF-8">
+	<title>Ulzuins Flame</title>
+	{% load static %}
+	 <link rel="stylesheet" href="{% static 'styles/list.css' %}"/>
+</head>
+<body>	
+	<div>
+		<a href="index.html"><img src="{% static 'res/logo tocha.png' %}" alt="Ulzuin's Flame" title="Ulzuin's Flame" width="30" height="85" class="logo"/></a>
+		<form class="search-wrapper">
+			<input type="text" name="focus" required class="search-box" placeholder="Pesquise por um termo" />
+			<button class="close-icon" type="reset"></button>
+		</form>
+	</div>
+	<p id="resultados">#Resultados: {{N}}</p>
+	<div id="list-wrapper">
+		{% for i in art %}
+			<div class="list-l">
+   				<h3> Titulo: {{i.titulo}}</h3>
+   				<p class="resumo">Resumo: {{i.resumo}}</p>
+   				<p class="resumo">Resume: {{i.resume}}</p>
+   				<h4>Autor: <p class="content">{{i.autor}}</p></h4>
+   				<h4>Palavras-chave: <p class="content">{{i.palavraschave}}</p></h4>
+   				<h4>Direitos de uso: <p class="content">{{i.direitosdeuso}}</p></h4>
+   				<h4>Instituição: <p class="content">{{i.local}}</p></h4>
+   				<h4>Data de Publicação: <p class="content">{{i.datapubli}}</p></h4>
+   				<h4>Revista: <p class="content">{{i.Revista}}</p></h4>
+   				<h4 class="ultimo">DOI: <p class="content">{{i.Doe}}</p></h4>
+   			</div>
+		{% endfor %}
+	</div>
+</body>
+</html>

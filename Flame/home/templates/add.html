@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html lang="pt br">
+<head>
+	<meta charset="UTF-8">
+	<title>Ulzuins Flame</title>
+	{% load static %}
+	 <link rel="stylesheet" href="{% static 'styles/add.css' %}"/>
+</head>
+<body>
+	<a href="index.html"><img src="{% static 'res/logo tocha.png' %}" alt="Ulzuin's Flame" title="Ulzuin's Flame" width="40" height="105" class="logo"/></a>
+	<section id="add-wrapper">
+		<form method="POST" action="add/">
+			<div class="caixas">
+				<label for="titulo">Título:</label>
+				<input type="text" placeholder="Insira o título" name="titulo">
+			</div>
+			<div class="caixas">
+				<label for="resumo">Resumo:</label>
+				<textarea name="resumo" placeholder="Insira o resumo" cols="100" rows="7"></textarea>
+			</div>
+			<div class="caixas">
+				<label for="resume">Resume:</label>
+				<textarea name="resume" placeholder="Insira o Abstract" cols="100" rows="7"></textarea>
+			</div>
+			<div class="caixas">
+				<label for="autor">Autor(es):</label>
+				<input type="text" placeholder="Insira o(s) autor(es)" name="autor">
+			</div>
+			<div class="caixas">
+				<label for="palavraschave">Palavras-chave:</label>
+				<input type="text" placeholder="Insira as palavras-chave" name="palavraschave">
+			</div>
+			<div class="caixas">
+				<label for="direitosdeuso">Direitos autorais:</label>
+				<input type="text" placeholder="Insira os direitos autorais" name="direitosdeuso">
+			</div>
+			<div class="caixas">
+				<label for="local">Instituição:</label>
+				<input type="text" placeholder="Insira a instituição" name="local">
+			</div>
+    	    <div class="caixas">
+    	    	<label for="datapubli">Data de publicação:</label>
+    	    	<input type="date" id="datapubli" name="datapubli">
+    	    </div>
+			<div class="caixas">
+				<label for="doe">DOI:</label>
+				<input type="text" placeholder="Insira o DOI" name="doe">
+			</div>
+			<div class="caixas">
+				<label for="revista">Revista:</label>
+				<input type="text" placeholder="Insira a revista em que foi publicado" name="revista">
+			</div>
+			<div class="caixas">
+				<input type="submit" class="btn btn-success">
+			</div>
+		</form>
+	</section>
+</body>
+</html>
